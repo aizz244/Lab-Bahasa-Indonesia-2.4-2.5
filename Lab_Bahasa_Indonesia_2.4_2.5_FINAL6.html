@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab Maya Bahasa Indonesia 2.4 & 2.5</title>
+<style>
+:root{--g:#1f6f43;--g2:#2f8b57;--bg:#dff0df;--ink:#18352a;--light:#edf7ef;--red:#d85b55;--shadow:0 8px 22px rgba(22,66,43,.12)}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(120deg,#155b38,#2f8b57);color:white;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+h1{font-size:21px;margin:0}.brand{display:flex;align-items:center;gap:10px}.logo{font-size:32px}header small{opacity:.9}
+button{font:inherit;cursor:pointer}#reset{border:0;border-radius:10px;padding:10px 14px;background:white;color:var(--g);font-weight:800}
+nav{display:flex;gap:5px;background:#124a2f;padding:7px 10px;overflow-x:auto}nav button{border:0;background:transparent;color:#dff5e6;padding:10px 14px;border-radius:9px;font-weight:700;white-space:nowrap}nav button.active{background:white;color:var(--g)}
+main{max-width:1200px;margin:auto;padding:16px}.tab{display:none}.tab.active{display:block}.card{background:white;border-radius:15px;padding:17px;margin-bottom:15px;box-shadow:var(--shadow)}
+.hero{background:linear-gradient(135deg,#e9f7e9,#fff);border-left:7px solid var(--g)}.badge{display:inline-block;background:#e8f5ea;color:var(--g);padding:6px 10px;border-radius:99px;font-size:12px;font-weight:900}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{background:var(--light);padding:8px 11px;border-radius:99px;font-weight:700;font-size:13px}
+.example{border-left:5px solid #f4c95d;background:#fffaf0;padding:12px;border-radius:9px;margin:10px 0}.word{font-size:20px;font-weight:900;color:var(--g)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.step{padding:12px;background:#f4faf5;border:1px solid #d9eadc;border-radius:12px}.step b{display:block;color:var(--g)}
+table{width:100%;border-collapse:collapse}th,td{border:1px solid #d9e7dc;padding:9px;text-align:left}th{background:var(--light)}
+.quiz{border:2px solid #d9eadc;border-radius:13px;padding:14px;margin-bottom:12px}.options{display:flex;flex-direction:column;gap:12px;margin-top:14px}.options button{display:block;width:100%;border:2px solid #cfe1d2;background:white;border-radius:12px;padding:14px 16px;text-align:left;font-weight:700;font-size:16px;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}.options button.correct{border-color:#35a45b;background:#eaf8ed}.options button.wrong{border-color:var(--red);background:#fff0ef}.options button.correct{border-color:#35a45b;background:#eaf8ed}.options button.wrong{border-color:var(--red);background:#fff0ef}
+.score{display:inline-block;background:var(--light);padding:11px 14px;border-radius:10px;font-weight:900;font-size:19px}.feedback{font-weight:800;margin-top:10px}
+textarea{width:100%;min-height:90px;border:2px solid #cfe1d2;border-radius:11px;padding:12px;font:inherit;resize:vertical}.action{border:0;background:var(--g);color:white;padding:16px 22px;border-radius:12px;font-weight:900;margin-top:10px;cursor:pointer;touch-action:manipulation;position:relative;z-index:9999;pointer-events:auto;min-height:52px}.action.secondary{background:#e8f5ea;color:var(--g)}
+footer{text-align:center;padding:15px;color:#52705f;font-weight:700}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}h1{font-size:17px}}
+@media(max-width:430px){.steps{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="brand"><div class="logo">📚</div><div><h1>LAB MAYA: BAHASA INDONESIA</h1><small>Materi 2.4 & 2.5 • Eksplorasi Interaktif</small></div></div><button id="reset" onclick="resetLab()">↻ Reset</button></header>
+<nav>
+<button class="active" onclick="showTab('m24',this)">📖 Materi 2.4</button>
+<button onclick="showTab('m25',this)">📝 Materi 2.5</button>
+<button onclick="showTab('contoh',this)">💡 Contoh</button>
+<button onclick="showTab('lkpd',this)">📋 LKPD</button>
+<button onclick="showTab('game',this)">🎮 Game 1</button><button onclick="showTab('game2',this)">🎲 Game 2</button>
+
+</nav>
+<main>
+<section id="m24" class="tab active">
+<div class="card hero"><span class="badge">MATERI 2.4</span><h2>Kosakata Baru dan Imbuhan me-</h2><p>Belajar memahami makna kosakata baru dan penggunaan imbuhan <b>me-</b>.</p><div class="chips"><span class="chip">🔤 Kosakata</span><span class="chip">🧩 Imbuhan me-</span><span class="chip">✍️ Kata kerja</span></div></div>
+<div class="grid"><div class="card"><h3>Apa itu kosakata baru?</h3><p>Kosakata baru adalah kata yang belum kita pahami atau belum sering digunakan. Maknanya dapat diketahui dari kalimat, teks, atau kamus.</p><div class="example"><b>Contoh:</b> “Rani <b>mengamati</b> kegiatan di taman.”<br><b>Mengamati</b> berarti melihat atau memperhatikan dengan teliti.</div></div>
+<div class="card"><h3>Apa itu imbuhan me-?</h3><p>Imbuhan <b>me-</b> dapat membentuk kata kerja yang menunjukkan suatu tindakan.</p><div class="example"><span class="word">me- + baca → membaca</span><br>me- + tulis → menulis</div></div></div>
+<div class="card"><h3>Contoh perubahan bentuk</h3><table><tr><th>Bentuk</th><th>Contoh</th></tr><tr><td>me-</td><td>melihat, merawat</td></tr><tr><td>mem-</td><td>membaca, membawa</td></tr><tr><td>men-</td><td>menulis, menanam</td></tr><tr><td>meng-</td><td>menggambar, mengamati</td></tr></table></div>
+</section>
+<section id="m25" class="tab">
+<div class="card hero"><span class="badge">MATERI 2.5</span><h2>Menganalisis Informasi dalam Teks</h2><p>Informasi dapat ditemukan dalam cerita inspiratif, surat pribadi, dan teks prosedur.</p></div>
+<div class="grid"><div class="card"><h3>🌟 Cerita Inspiratif</h3><p>Cerita yang memberikan semangat, teladan, atau pelajaran.</p><b>Analisis:</b> tokoh, peristiwa, masalah, penyelesaian, pesan.</div>
+<div class="card"><h3>💌 Surat Pribadi</h3><p>Surat untuk berkomunikasi dengan orang yang dikenal secara pribadi.</p><b>Analisis:</b> pengirim, penerima, tujuan, isi, bahasa.</div></div>
+<div class="card"><h3>🛠️ Teks Prosedur</h3><p>Teks yang berisi langkah-langkah untuk melakukan atau membuat sesuatu.</p><div class="steps"><div class="step"><b>1. Tujuan</b>Apa yang akan dilakukan.</div><div class="step"><b>2. Alat/Bahan</b>Hal yang diperlukan.</div><div class="step"><b>3. Langkah</b>Urutan tindakan.</div><div class="step"><b>4. Hasil</b>Kondisi akhir.</div></div></div>
+</section>
+<section id="contoh" class="tab"><div class="card"><h2>💡 Contoh Analisis</h2><div class="example"><b>Teks:</b> “Dina membantu ibunya menanam bunga. Ia menyiapkan tanah, memasukkan bibit, lalu menyiramnya.”</div><p><b>Kosakata:</b> <i>bibit</i> = tanaman kecil yang akan ditanam.</p><p><b>Imbuhan me-:</b> <i>menanam</i> dan <i>menyiapkan</i> menunjukkan kegiatan.</p><p><b>Jenis teks:</b> dapat menjadi bagian teks prosedur jika disusun sebagai langkah-langkah.</p></div>
+<div class="card"><h3>Cara menganalisis informasi</h3><div class="steps"><div class="step"><b>1. Baca</b>Baca dengan teliti.</div><div class="step"><b>2. Temukan</b>Cari informasi penting.</div><div class="step"><b>3. Pahami</b>Tentukan maknanya.</div><div class="step"><b>4. Simpulkan</b>Tulis kesimpulan.</div></div></div></section>
+
+<section id="lkpd" class="tab">
+<div class="card hero"><span class="badge">LKPD</span><h2>📋 Latihan Menulis</h2><p>Jawab 5 pertanyaan berikut. Setiap jawaban benar mendapat <b>20 poin</b>.</p></div>
+<div class="card">
+<div class="quiz"><b>1. Sebutkan satu contoh kosakata baru.</b><textarea id="a1" placeholder="Tulis jawabanmu..."></textarea><div id="f1" class="feedback"></div></div>
+<div class="quiz"><b>2. Tuliskan dua kata yang menggunakan imbuhan me-.</b><textarea id="a2" placeholder="Tulis jawabanmu..."></textarea><div id="f2" class="feedback"></div></div>
+<div class="quiz"><b>3. Apa tujuan dari teks prosedur?</b><textarea id="a3" placeholder="Tulis jawabanmu..."></textarea><div id="f3" class="feedback"></div></div>
+<div class="quiz"><b>4. Sebutkan satu informasi penting yang dapat ditemukan dalam surat pribadi.</b><textarea id="a4" placeholder="Tulis jawabanmu..."></textarea><div id="f4" class="feedback"></div></div>
+<div class="quiz"><b>5. Apa pesan yang biasanya dapat diambil dari cerita inspiratif?</b><textarea id="a5" placeholder="Tulis jawabanmu..."></textarea><div id="f5" class="feedback"></div></div>
+<button type="button" class="action" id="checkLkpdBtn">✓ Periksa Isian</button>
+<div style="margin-top:14px"><span class="score" id="lkpdScore">Skor: 0/100</span></div>
+<div id="lkpdMsg" style="font-size:26px;font-weight:900;text-align:center;margin-top:20px"></div>
+</div></section>
+<section id="game" class="tab"><div class="card hero"><span class="badge">GAME</span><h2>🎮 Tebak Jenis Teks</h2><p>Pilih jenis teks yang paling sesuai.</p></div><div class="card"><p id="gp"></p><h3 id="gt"></h3><div class="options"><button onclick="gameAns(0)">🌟 Cerita inspiratif</button><button onclick="gameAns(1)">💌 Surat pribadi</button><button onclick="gameAns(2)">🛠️ Teks prosedur</button></div><div id="gf" class="feedback"></div><div class="score">Skor: <span id="gs">0</span>/100</div></div></section>
+<section id="game2" class="tab">
+<div class="card hero"><span class="badge">GAME 2</span><h2>🎲 Pilih Kata Berimbuhan me-</h2><p>Pilih kata yang benar. Setiap jawaban benar mendapat <b>20 poin</b>.</p></div>
+<div class="card"><p id="g2p"></p><h3 id="g2t"></h3>
+<div class="options">
+<button onclick="game2Ans(0)"></button><button onclick="game2Ans(1)"></button><button onclick="game2Ans(2)"></button>
+</div>
+<div id="g2f" class="feedback"></div>
+<div class="score">Skor: <span id="g2s">0</span>/100</div></div></section>
+
+</main>
+
+<footer>Bahasa Indonesia • Materi 2.4 & 2.5 • aizz244</footer>
+<script>
+const games=[
+['Surat pribadi biasanya ditujukan kepada siapa?',['Hewan','Teman atau keluarga','Benda'],1],
+['Teks prosedur berisi apa?',['Langkah-langkah','Cerita lucu','Daftar nama'],0],
+['Cerita inspiratif biasanya memberikan apa?',['Harga barang','Alamat rumah','Semangat dan teladan'],2],
+['Kata “membaca” menggunakan imbuhan apa?',['di-','me-','ber-'],1],
+['Mana yang termasuk contoh kata berimbuhan me-?',['rumah','buku','menulis'],2]
+];
+let gi=0,gscore=0;
+function renderG(){
+ const g=games[gi];
+ document.getElementById('gp').textContent='Soal '+(gi+1)+' dari 5';
+ document.getElementById('gt').textContent=g[0];
+ document.getElementById('gf').textContent='';
+ const labels=['A','B','C'];
+ document.querySelectorAll('#game .options button').forEach((b,i)=>{
+   b.disabled=false;b.className='';b.textContent=labels[i]+'. '+g[1][i];
+ });
+}
+function gameAns(i){
+ const g=games[gi];
+ document.querySelectorAll('#game .options button').forEach(b=>b.disabled=true);
+ if(i===g[2]){gscore+=20;document.querySelectorAll('#game .options button')[i].classList.add('correct');document.getElementById('gf').textContent='🎉 Benar! +20';}
+ else{document.querySelectorAll('#game .options button')[i].classList.add('wrong');document.getElementById('gf').textContent='❌ Belum tepat. Coba lagi di soal berikutnya!';document.querySelectorAll('#game .options button')[g[2]].classList.add('correct');}
+ document.getElementById('gs').textContent=gscore;
+ setTimeout(()=>{gi++;if(gi<5)renderG();else{document.getElementById('gp').textContent='🏆 Game selesai!';document.getElementById('gt').textContent='Skor akhir: '+gscore+'/100';document.getElementById('gf').innerHTML='<button class="action" onclick="resetG()">Main lagi</button>'; }},800);
+}
+function resetG(){gi=0;gscore=0;document.getElementById('gs').textContent=0;renderG();}
+
+const games2=[
+['Manakah kata yang menggunakan imbuhan me- dengan tepat?',['disapu','menyapu','sapuan'],1],
+['Kata dasar dari “membaca” adalah...',['bacaan','pembaca','baca'],2],
+['Manakah yang merupakan kata kerja berimbuhan me-?',['gambar','menggambar','bergambar'],1],
+['Kata “menanam” berasal dari kata dasar...',['tanaman','tanam','penanam'],1],
+['Manakah kalimat yang menggunakan kata berimbuhan me-?',['Rina sangat rajin.','Rina menulis surat.','Rina di rumah.'],1]
+];
+let g2i=0,g2score=0;
+function renderG2(){
+ const g=games2[g2i];
+ document.getElementById('g2p').textContent='Soal '+(g2i+1)+' dari 5';
+ document.getElementById('g2t').textContent=g[0];
+ document.getElementById('g2f').textContent='';
+ const labels=['A','B','C'];
+ document.querySelectorAll('#game2 .options button').forEach((b,i)=>{b.disabled=false;b.className='';b.textContent=labels[i]+'. '+g[1][i];});
+}
+function game2Ans(i){
+ const g=games2[g2i];
+ document.querySelectorAll('#game2 .options button').forEach(b=>b.disabled=true);
+ if(i===g[2]){g2score+=20;document.querySelectorAll('#game2 .options button')[i].classList.add('correct');document.getElementById('g2f').textContent='🎉 Benar! +20';}
+ else{document.querySelectorAll('#game2 .options button')[i].classList.add('wrong');document.getElementById('g2f').textContent='❌ Salah. +0';document.querySelectorAll('#game2 .options button')[g[2]].classList.add('correct');}
+ document.getElementById('g2s').textContent=g2score;
+ setTimeout(()=>{g2i++;if(g2i<5)renderG2();else{document.getElementById('g2p').textContent='🏆 Game selesai!';document.getElementById('g2t').textContent='Skor akhir: '+g2score+'/100';document.getElementById('g2f').innerHTML='<button class="action" onclick="resetG2()">Main lagi</button>'; }},800);
+}
+function resetG2(){g2i=0;g2score=0;document.getElementById('g2s').textContent=0;renderG2();}
+
+function showTab(id,btn){
+  document.querySelectorAll('.tab').forEach(function(tab){tab.classList.remove('active');});
+  const target=document.getElementById(id);
+  if(target) target.classList.add('active');
+  document.querySelectorAll('nav button').forEach(function(b){b.classList.remove('active');});
+  if(btn) btn.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function resetLab(){resetQuiz();resetG();resetG2();showTab('m24',document.querySelector('nav button'))}
+renderG();renderG2();
+
+function checkLKPD(){
+  const rules=[
+    v=>v.trim().split(/\s+/).filter(Boolean).length>=1,
+    v=>v.split(/[\s,;]+/).filter(Boolean).length>=2 && /(me|mem|men|meng|meny)/i.test(v),
+    v=>/(langkah|cara|petunjuk|melakukan|membuat)/i.test(v),
+    v=>/(kabar|berita|kegiatan|pengirim|penerima|isi|cerita)/i.test(v),
+    v=>/(pesan|pelajaran|teladan|semangat|pantang menyerah|jangan menyerah)/i.test(v)
+  ];
+  let score=0;
+  for(let i=1;i<=5;i++){
+    const el=document.getElementById('a'+i), fb=document.getElementById('f'+i);
+    const v=(el?el.value:'').trim();
+    const ok=rules[i-1](v);
+    if(ok) score+=20;
+    if(fb) fb.textContent=ok?'✓ Benar! +20':'✗ Salah. +0';
+  }
+  const total=document.getElementById('lkpdScore');
+  if(total) total.textContent='Skor: '+score+'/100';
+  const msg=document.getElementById('lkpdMsg');
+  if(msg) msg.innerHTML=score===100?'🎉 <strong>Anak kelas 5B hebat semua! 💪</strong><br><span style="font-size:20px">🏆 Skor 100/100</span>':'';
+  return false;
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  const b=document.getElementById('checkLkpdBtn');
+  if(b) b.addEventListener('click',checkLKPD);
+});
+
+</script>
+</body>
+</html>
